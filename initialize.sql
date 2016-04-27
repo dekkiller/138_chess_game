@@ -43,17 +43,17 @@ create table viewer_slot(
 
 create table game_history(
 	avg_movetime		float(4,2),				#minute.second
-	match_id			integer not null,
+	match_id		integer not null,
 	match_length		float(4,2),				#hour.minute
-	replay_id			integer,
-	elo_change			integer,
+	replay_id		integer,
+	elo_change		integer,
 	winner			varchar(15),
-	date_time			char(16),				#MM/DD/YYYY:HH.MM
-	lobby_id			integer not null,
-	player_id			varchar(25) not null,
-	primary key 		(match_id),
-	foreign key	(lobby_id) references lobby(lobby_id),
-	foreign key	(player_id) references player(id)
+	date_time		char(16),				#MM/DD/YYYY:HH.MM
+	lobby_id		integer not null,
+	player_id		varchar(25) not null,
+	primary key (match_id),
+	foreign key (lobby_id) references lobby(lobby_id),
+	foreign key (player_id) references player(id)
 );
 
 create table user(
