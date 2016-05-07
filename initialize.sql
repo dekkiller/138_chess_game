@@ -72,15 +72,11 @@ create table game_history(
     date_time       char(19),               #MM/DD/YYYY@HH:MM:SS
     l_id        integer not null,
     p_id        varchar(25) not null,
-    CP_numbermoves  integer,
-    CP_ID        	integer,
-    cp_startpos     char(2),
-    cp_endpos		char(2),
     primary key (match_id),
     foreign key (l_id) references lobby(lobby_id),
     foreign key (p_id) references player(player_id)
 );
- 
+
 create table developer(
     fname           varchar(15) not null,
     lname           varchar(15) not null,
@@ -164,8 +160,8 @@ insert into lobby_stats (lobby_id, games_in_lobby, avg_gametime, pieces_taken, a
 
 #=====================================================================GAME HISTORY=====================================================================
 
-insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id, CP_numbermoves, CP_ID, cp_startpos, cp_endpos) values (70730, '00:11:43', '02:26:00', 48396, 3, 'blawson5', '02/14/2016@03:07:37', 1, 'blawson5', 26, 12, 'A2', 'B4');
-insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id, CP_numbermoves, CP_ID, cp_startpos, cp_endpos) values (77091, '03:08:24', '44:05:37', 70145, -1, 'enginerd4', '01/10/2016@14:09:08', 2, 'blawson5', 48, 5, 'C3', 'D9');
-insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id, CP_numbermoves, CP_ID, cp_startpos, cp_endpos) values (28502, '00:37:09', '04:07:45', 46349, 4, 'damarsh', '11/03/2015@15:01:22', 2, 'damarsh', 33, 1, 'D2', 'A4');
-insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id, CP_numbermoves, CP_ID, cp_startpos, cp_endpos) values (42450, '01:03:17', '23:42:10', 70093, 3, 'vasquo', '11/06/2015@12:54:55', 2, 'vasquo', 58, 31, 'B2', 'C4');
-insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id, CP_numbermoves, CP_ID, cp_startpos, cp_endpos) values (66070, '00:12:09', '05:11:05', 79598, -5, 'rgreene2', '06/11/2015@23:45:08', 1, 'cramos9', 32, 18, 'D2', 'D4');
+insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id) values (70730, '00:11:43', '02:26:00', 48396, 3, 'blawson5', '02/14/2016@03:07:37', 1, 'blawson5');
+insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id) values (77091, '03:08:24', '44:05:37', 70145, -1, 'enginerd4', '01/10/2016@14:09:08', 2, 'blawson5');
+insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id) values (28502, '00:37:09', '04:07:45', 46349, 4, 'damarsh', '11/03/2015@15:01:22', 2, 'damarsh');
+insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id) values (42450, '01:03:17', '23:42:10', 70093, 3, 'vasquo', '11/06/2015@12:54:55', 2, 'vasquo');
+insert into game_history (match_id, avg_movetime, match_length, replay_id, elo_change, winner, date_time, l_id, p_id) values (66070, '00:12:09', '05:11:05', 79598, -5, 'rgreene2', '06/11/2015@23:45:08', 1, 'cramos9');
